@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify the item</title>
+</head>
+<body background="../static/bcg.jpeg" style="background-size: cover">
+    <div align="center">
+        <form id="item-form"
+              th:action="@{${T(pl.aziria.shoppinglisttoemail.util.Mappings).VIEW_ITEM}}"
+              th:object="${item}"
+              method="post">
+            <h1>Modify item</h1>
+            <table border="1" cellpadding="5" bgcolor="#6a8dff">
+                <tr>
+                    <td><label>ID</label></td>
+                    <td><input type="text" th:value="${item.id}" th:field="*{id}" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type="text" th:value="${item.name}" th:field="*{name}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Details</label></td>
+                    <td><input type="text" th:value="${item.details}" th:field="*{details}"/></td>
+                </tr>
+            </table>
+            <p><input type="submit" value="Submit"/></p>
+        </form>
+    </div>
+</body>
+</html>

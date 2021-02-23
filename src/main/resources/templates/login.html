@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <div align="center">
+        <form id="login-form"
+              th:action="@{${T(pl.aziria.shoppinglisttoemail.util.Mappings).LOGIN}}"
+              method="post">
+            <h1>Please log in</h1>
+            <label>Username: <input type="text" name="username"/></label>
+            <label>Password: <input type="password" name="password"/></label>
+            <input type="submit" value="Log in"/>
+        </form>
+    </div>
+</body>
+</html>

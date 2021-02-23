@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <title th:remove="all">Your shopping list</title>
+</head>
+<body>
+<div align="center">
+    <table border="1" cellpadding="5">
+
+        <caption><h2>Shopping List</h2></caption>
+        <tr>
+            <th>Item</th>
+            <th>Details</th>
+        </tr>
+        <tr id="foreach" th:each="item : ${items_list}">
+            <td id="name" th:text="${item.name}">name</td>
+            <td id="details" th:text="${item.details}">details</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

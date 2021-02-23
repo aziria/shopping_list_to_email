@@ -1,0 +1,4 @@
+<thlogic>
+    <attr sel="#view-list"
+          th:href="@{${T(pl.aziria.shoppinglisttoemail.util.Mappings).ITEMS_LIST}}"/>
+</thlogic>
